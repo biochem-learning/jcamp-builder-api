@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, jsonify
 from flask_cors import CORS
 from process import build_jcamp, build_jcamp_blocks, build_metadata, build_assignment_table
 from scipy.signal import find_peaks
@@ -37,7 +37,7 @@ def find_peak_route():
     prominence = data.get('prominence', None)
     
     peaks, _ = find_peaks(array, prominence=prominence)
-    return peaks
+    return jsonify({"peaks": peaks.tolist()})
 
 if __name__ == "__main__":
     app.run(debug=True, port=os.getenv("PORT", default=5000))
