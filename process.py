@@ -77,9 +77,6 @@ def build_assignment_table(assignments: list, metadata: dict | None = None) -> s
     lines.append("##END=$$ End of the assignment block")
     return "\n".join(lines)
 
-
-print(build_assignment_table(peak_list))
-
 # Add conditions if assignments = None / ""
 def build_jcamp(metadatas:str, structure: str, spectrum: str, assignments: str) -> str:
     return "\n\n".join([metadatas, structure, assignments, spectrum])
@@ -109,8 +106,8 @@ def build_jcamp(metadatas:str, structure: str, spectrum: str, assignments: str) 
 
 # Peak Auto Identification
 # dic, data = ng.jcampdx.read("2-PentanoneHNMR.jdx")
-
-# peaks, _ = find_peaks(data, prominence=0.1) # 10000 for CNMR, 0.1 fpr HNMR
+function iden
+# peaks, _ = find_peaks(data, prominence=0.2) # 10000 for CNMR, 0.1 fpr HNMR
 
 # plt.plot(data)
 # # print(peaks)

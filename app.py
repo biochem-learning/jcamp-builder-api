@@ -1,6 +1,7 @@
 from flask import Flask, request
 from flask_cors import CORS
 from process import build_jcamp, build_jcamp_blocks, build_metadata, build_assignment_table
+from scipy.signal import find_peaks
 import os
 
 app = Flask(__name__)
@@ -29,12 +30,16 @@ def build_jcamp_route():
 
     return built_jcamp
 
-@app.route('/identify_peak_and_build_jcamp', methods=['POST'])
-def identify_peak_and_build_jcamp_route():
-    return
+@app.route('/find_peak', methods=['POST'])
+def find_peak_route():
+    data = request.json
+    array = data.get('array', [])
+    prominence = data.get('prominence', None)
+    
+    peaks, _ = find_peaks(array, prominence)
+    return peaks
 
 
 if __name__ == "__main__":
     app.run(debug=True, port=os.getenv("PORT", default=5000))
-    
     
