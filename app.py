@@ -36,9 +36,8 @@ def find_peak_route():
     array = data.get('array', [])
     prominence = data.get('prominence', None)
     
-    peaks, _ = find_peaks(array, prominence)
+    peaks, _ = find_peaks(array, prominence=prominence)
     return peaks
-
 
 if __name__ == "__main__":
     app.run(debug=True, port=os.getenv("PORT", default=5000))
