@@ -106,7 +106,7 @@ def build_jcamp(metadatas:str, structure: str, spectrum: str, assignments: str) 
 
 # Peak Auto Identification
 # dic, data = ng.jcampdx.read("2-PentanoneHNMR.jdx")
-function iden
+
 # peaks, _ = find_peaks(data, prominence=0.2) # 10000 for CNMR, 0.1 fpr HNMR
 
 # plt.plot(data)
