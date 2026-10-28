@@ -1,8 +1,9 @@
 # jcamp-builder-api
 
-API responsible for JCAMP merging and peak detection for [JCAMP-DX Builder](https://github.com/biochem-learning/jcamp-builder-app).
+> [!WARNING]
+> **Deprecated:** This API is no longer used. JCAMP merging and peak detection for JCAMP-DX builder is now handled locally.
 
-!!! DEPRECATED: This API is no longer used. JCAMP merging and peak detection for JCAMP-DX builder is now handled locally.
+API responsible for JCAMP merging and peak detection for [JCAMP-DX Builder](https://github.com/biochem-learning/jcamp-builder-app).
 
 ### Installation
 
