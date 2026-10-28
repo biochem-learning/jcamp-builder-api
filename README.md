@@ -8,7 +8,7 @@ API responsible for JCAMP merging and peak detection for [JCAMP Builder](https:/
 
 ```bash
 git clone <repository-url>
-cd SmilesMerger
+cd jcamp-builder-api
 
 python -m venv .venv
 source .venv/bin/activate
